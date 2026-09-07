@@ -1,0 +1,131 @@
+READY TO RUN PRESENTATION STEPS
+===============================
+
+Project ka matlab:
+Yeh chat app nahi, Network Monitoring Dashboard hai.
+Is mein clients network operators ki tarah connect hotay hain.
+Woh network status, alerts, emergency alerts, room alerts, private incident messages
+aur log files share karte hain.
+
+
+PART 1: SERVER ACTIVATE KARNA
+=============================
+
+1. D:\Project folder open karo.
+2. Address bar mein cmd likh kar Enter press karo.
+3. Terminal khul jaye to command likho:
+
+python -B server.py
+
+4. Server active hone par yeh output aaye ga:
+
+[SERVER] Real-time monitoring server listening on 0.0.0.0:5050
+[SERVER] Waiting for clients. Press Ctrl+C to stop.
+
+5. Is server terminal ko close mat karna.
+   Yeh central server hai. Clients isi se connect hotay hain.
+
+
+PART 2: CLIENT 1 CONNECT KARNA
+==============================
+
+1. D:\Project folder mein dobara address bar mein cmd likh kar Enter press karo.
+2. Command likho:
+
+python -B client_gui.py
+
+3. GUI open ho jaye gi.
+4. Server field mein 127.0.0.1 rehne do.
+5. Port field mein 5050 rehne do.
+6. Name field mein Client1 likho.
+7. Connect press karo.
+8. Status Online ho jaye ga.
+
+
+PART 3: CLIENT 2 CONNECT KARNA
+==============================
+
+1. D:\Project folder se ek aur cmd open karo.
+2. Command likho:
+
+python -B client_gui.py
+
+3. Name field mein Client2 likho.
+4. Connect press karo.
+
+
+PART 4: CLIENT 3 CONNECT KARNA
+==============================
+
+1. Ek aur cmd open karo.
+2. Command likho:
+
+python -B client_gui.py
+
+3. Name field mein Client3 likho.
+4. Connect press karo.
+
+
+PART 5: DEMO DURING PRESENTATION
+================================
+
+Demo 1: Active Nodes
+- Har GUI ke right side par Active Nodes mein Client1, Client2, Client3 show hon ge.
+- Sir ko batao: server currently connected clients ke name, IP aur hostname show kar raha hai.
+
+Demo 2: Broadcast Message
+- Client1 ke bottom message box mein likho:
+  Network status normal
+- Broadcast press karo.
+- Message sab clients par show ho jaye ga.
+
+Demo 3: Alert
+- Client1 ke bottom message box mein likho:
+  CPU usage crossed 90 percent
+- Alert press karo.
+- Alert sab clients par show ho jaye ga.
+
+Demo 4: Emergency Alert
+- Client1 ke bottom message box mein likho:
+  Core router latency critical
+- Emergency press karo.
+- Emergency message sab clients par show ho jaye ga.
+
+Demo 5: Group Room
+- Client1 aur Client2 dono mein CPU room select karo.
+- Join Room press karo.
+- Client1 ke bottom message box mein likho:
+  CPU room incident opened
+- Send Room Message press karo.
+- Yeh CPU room members ko mile ga.
+
+Demo 6: Private Chat
+- Client1 GUI ke Private Chat section mein:
+  Target Client Name: Client2
+  Private Message: Please check firewall logs
+- Send Private press karo.
+- Message Client1 aur Client2 par show hoga, Client3 par nahi.
+
+Demo 7: File Sharing
+- Client1 mein Share File press karo.
+- D:\Project\sample_logs\cpu_fault_log.txt select karo.
+- File share ka message sab clients par show hoga.
+
+
+IF GUI MESSAGE SEND NA HO
+=========================
+
+1. Pehle check karo status Online hai.
+2. Broadcast/Alert/Emergency ke liye bottom long input box use karo.
+3. Private message ke liye right side ke Private Chat fields use karo.
+4. Target Client Name exact same hona chahiye, e.g. Client2.
+5. Server terminal running rehna chahiye.
+
+
+ONE CLICK METHOD
+================
+
+CLI demo ke liye:
+run_demo_cli.bat
+
+GUI manually better hai presentation ke liye kyunki sir dashboard dekh sakte hain.

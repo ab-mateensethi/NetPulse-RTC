@@ -1,0 +1,3 @@
+2026-06-05 10:15:04 CPU_MONITOR Node=Router-02 Status=WARNING CPU=88%
+2026-06-05 10:15:09 CPU_MONITOR Node=Router-02 Status=CRITICAL CPU=94%
+2026-06-05 10:15:12 ACTION Broadcast emergency alert to NOC clients

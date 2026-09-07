@@ -1,0 +1,121 @@
+REAL-TIME COLLABORATIVE NETWORK MONITORING DASHBOARD
+====================================================
+
+Project folder:
+D:\Project
+
+Important files:
+1. server.py       -> Server run karne ke liye
+2. client_gui.py   -> GUI client run karne ke liye
+3. client_cli.py   -> Terminal/CLI client run karne ke liye
+4. protocol.py     -> Common socket JSON protocol helper
+5. test_integration.py -> Automated testing
+6. Real_time_Collaborative_Network_Monitoring_Report.docx -> MS Word report
+7. report_assets folder -> Diagrams and screenshots
+
+
+VERY SIMPLE METHOD
+==================
+
+1. D:\Project folder open karo.
+2. run_demo_cli.bat par double click karo.
+3. Is se 4 terminals open hon ge:
+   - Monitoring Server
+   - Client Ali
+   - Client Ahmed
+   - Client Usman
+4. Ab kisi bhi client terminal mein commands type kar ke demo dikha sakte ho.
+
+
+HOW TO RUN FOR PRESENTATION
+===========================
+
+Step 1:
+D:\Project folder open karo.
+
+Step 2:
+Terminal 1 open karo aur run karo:
+python server.py
+
+Step 3:
+Terminal 2 open karo aur run karo:
+python client_cli.py --name Ali
+
+Step 4:
+Terminal 3 open karo aur run karo:
+python client_cli.py --name Ahmed
+
+Step 5:
+Terminal 4 open karo aur run karo:
+python client_cli.py --name Usman
+
+
+DEMO COMMANDS
+=============
+
+Client Ali terminal mein:
+/alert CPU usage crossed 90 percent
+
+Emergency alert:
+/emergency Core router latency critical
+
+Group room demo:
+/join CPU
+/room CPU CPU room incident opened
+
+Private chat demo:
+/pm Ahmed Please verify firewall logs
+
+File sharing demo:
+/file sample_logs/cpu_fault_log.txt
+
+Active nodes:
+/nodes
+
+Latency:
+/ping
+
+
+GUI CLIENT
+==========
+Agar GUI dikhani ho:
+python client_gui.py
+
+GUI mein:
+1. Server field mein 127.0.0.1 rehne do.
+2. Port field mein 5050 rehne do.
+3. Name field blank hoti hai. Yahan apna client name type karo, for example Client1.
+4. Connect button press karo.
+5. Neeche message box mein text likho.
+6. Broadcast button se normal message sab clients ko jaye ga.
+7. Alert button se warning alert sab clients ko jaye ga.
+8. Emergency button se critical alert sab clients ko jaye ga.
+9. Group Rooms se CPU/Bandwidth/Security room select karo aur Join Room press karo.
+10. Room message bhejne ke liye text likho aur Send Room Message press karo.
+11. Private Chat section mein Target Client Name likho.
+12. Private Message field mein message likho.
+13. Send Private press karo.
+14. Share File se sample_logs folder ki log file select kar sakte ho.
+
+
+IMPORTANT GUI NOTE
+==================
+Bottom long input box sirf Broadcast, Alert, Emergency aur Room Message ke liye hai.
+Private Chat ke liye right side par alag fields hain:
+Target Client Name = jis client ko message bhejna hai
+Private Message = jo message bhejna hai
+
+
+AUTOMATIC DEMO
+==============
+Agar 1 click par server aur 3 clients kholne hon:
+run_demo_cli.bat
+
+
+TESTING
+=======
+Project automatically test karne ke liye:
+run_test.bat
+
+Expected output:
+Integration test passed: nodes, broadcast alert, rooms, private chat, file sharing, and ping.

@@ -1,0 +1,55 @@
+EASIEST METHOD FOR TEACHER DEMO
+===============================
+
+1. D:\Project folder open karo.
+2. START_PRESENTATION_DEMO.bat par double-click karo.
+3. Yeh automatically open karega:
+   - 1 Server terminal
+   - Client1 GUI
+   - Client2 GUI
+   - Client3 GUI
+
+4. Server terminal close mat karna.
+5. GUI windows mein already Online status aa jana chahiye.
+
+Demo karne ka tareeqa:
+
+Broadcast:
+- Client1 ke bottom message box mein likho:
+  Network status normal
+- Broadcast button press karo.
+- Message Client1, Client2, Client3 sab par show hoga.
+
+Alert:
+- Bottom message box mein likho:
+  CPU usage crossed 90 percent
+- Alert press karo.
+
+Emergency:
+- Bottom message box mein likho:
+  Core router latency critical
+- Emergency press karo.
+
+Group Room:
+- Client1 aur Client2 mein CPU select karo.
+- Join Room press karo.
+- Client1 ke bottom message box mein likho:
+  CPU room incident opened
+- Send Room Message press karo.
+
+Private Chat:
+- Client1 ke Private Chat section mein:
+  Target Client Name: Client2
+  Private Message: Please check firewall logs
+- Send Private press karo.
+- Yeh message Client2 ko milega. Client3 ko nahi milega.
+
+File Sharing:
+- Client1 mein Share File press karo.
+- D:\Project\sample_logs\cpu_fault_log.txt select karo.
+- File share notification sab clients ko milegi.
+
+Important:
+- VS Code ke Interactive/Jupyter panel se file mat run karna.
+- Sirf terminal/cmd ya .bat file use karo.
+- Jupyter/ipykernel wala error ignore karo; woh project error nahi hai.
